@@ -3,9 +3,9 @@
 A classic newspaper front page summing up the world's news of
 Wednesday 18 November 2026: **35 stories, 6 continents, one day**.
 
-[![news-image-20261118](https://make.fun/badge/news-image-20261118)](https://make.fun/bounty/news-image-20261118)
-[![news-image-20261118](https://make.fun/badge/news-image-20261118/entries)](https://make.fun/bounty/news-image-20261118)
-[![news-image-20261118](https://make.fun/badge/news-image-20261118/pot)](https://make.fun/bounty/news-image-20261118)
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/marketzredcuy/makefun-news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/marketzredcuy/makefun-news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
 `main.py` copies the pre-composed `entry.png` to
 `$MAKEFUN_OUTPUT_DIR/entry.png` and verifies size, format and
