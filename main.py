@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
-"""news-image-20261117: write one image summing up the world's news of
-Tuesday 17 November 2026 to /output/entry.png.
+"""news-image-20261118: write one image summing up the world's news of
+Wednesday 18 November 2026 to /output/entry.png.
 
 The picture is a classic newspaper front page (entry.png, bundled with
 this program): a globe icon + "THE WORLD'S NEWS" masthead + a dark-blue
-nav bar, 10 main story cards (Ukraine's Kerch Bridge strike, Trump's
-Quad summit in Manila, the US chip-export loophole, the fourth Hormuz
-tanker fire, five EU states' Rwanda deportation plan, the West urging
-Israel to open Gaza crossings, Depardieu admitting sex assault, Japan
-scrambling jets, the Houthi advance in Yemen, Nvidia's earnings after
-Huang's exit), each with a numbered tag + category ribbon + image +
-headline + explainer, plus 32 more stories in the "ALSO ON TUESDAY"
-list in 3 columns — 42 stories in total, all reported on Tuesday
-17 November 2026 — and a world-landmarks skyline strip at the bottom.
+nav bar, 12 main story cards (Iran striking Kuwait and Bahrain, the US
+strike on Qeshm Island, Ukraine hitting the Kerch Bridge again, Xi
+hosting Putin before the Trump trilateral, Trump meeting Marcos on his
+way to China, Houthi drones at the Saudi pipeline, Democrats winning
+Alaska and the Senate, Ebola more than doubling in Congo, Nvidia
+beating earnings with revenue doubled, Israel electing a new speaker,
+Cyclone Xavier hitting the Cook Islands, the Anthropic IPO pricing),
+each with a numbered tag + category ribbon + image + headline +
+explainer, plus 30 more stories in the "ALSO ON WEDNESDAY" list in
+3 columns — 42 stories in total, all reported on Wednesday
+18 November 2026 — and a world-landmarks skyline strip at the bottom.
 The program copies it byte-for-byte to $MAKEFUN_OUTPUT_DIR/entry.png
 and verifies the size, format and dimensions (at most 1 MiB and 1024x1024).
 """
@@ -69,6 +71,10 @@ def main() -> int:
     width, height = image_size(dst)
     assert width <= 1024 and height <= 1024, (
         f"entry.png too big: {width}x{height} (limit 1024x1024)")
+    # The competition requires a square image; a rectangular render
+    # would be rejected, so fail loudly here instead of submitting it.
+    assert width == height, (
+        f"entry.png is not square: {width}x{height}")
     print(f"wrote {dst} ({size} bytes, {width}x{height})")
     return 0
 

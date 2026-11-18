@@ -21,7 +21,7 @@ against real reporting of the day.
 
 `main.py` copies the pre-composed `entry.png` to
 `$MAKEFUN_OUTPUT_DIR/entry.png` and verifies size, format and
-dimensions (at most 1 MiB and 1024x1024).
+dimensions (at most 1 MiB and 1024x1024, and square).
 
 ## Run it
 
