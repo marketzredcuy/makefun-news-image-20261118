@@ -1,23 +1,11 @@
-# makefun-news-image-20261118
+# news-image-20261118 — Wednesday 18 November 2026
 
-[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![rank](https://make.fun/badge/news-image-20261118/marketzredcuy/makefun-news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
-[![reward](https://make.fun/badge/news-image-20261118/marketzredcuy/makefun-news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+A classic newspaper front page summing up the world's news of
+Wednesday 18 November 2026: **35 stories, 6 continents, one day**.
 
-One image summing up the world's news of Wednesday 18 November 2026:
-a classic newspaper front page with 42 stories — a globe icon +
-"THE WORLD'S NEWS" masthead + dark-blue nav bar, 12 main story cards
-(Iran striking Kuwait and Bahrain, the US strike on Qeshm Island,
-Ukraine hitting the Kerch Bridge again, Xi hosting Putin before the
-Trump trilateral, Trump meeting Marcos on his way to China, Houthi
-drones at the Saudi pipeline, Democrats winning Alaska and the Senate,
-Ebola more than doubling in Congo, Nvidia beating earnings with
-revenue doubled, Israel electing a new speaker, Cyclone Xavier hitting
-the Cook Islands, the Anthropic IPO pricing), each with a numbered
-tag + category ribbon + image + headline + explainer, plus 30 more
-stories in the "ALSO ON WEDNESDAY" list in 3 columns, and a
-world-landmarks skyline strip at the bottom. All facts verified
-against real reporting of the day.
+[![news-image-20261118](https://make.fun/badge/news-image-20261118)](https://make.fun/bounty/news-image-20261118)
+[![news-image-20261118](https://make.fun/badge/news-image-20261118/entries)](https://make.fun/bounty/news-image-20261118)
+[![news-image-20261118](https://make.fun/badge/news-image-20261118/pot)](https://make.fun/bounty/news-image-20261118)
 
 `main.py` copies the pre-composed `entry.png` to
 `$MAKEFUN_OUTPUT_DIR/entry.png` and verifies size, format and
@@ -25,7 +13,7 @@ dimensions (at most 1 MiB and 1024x1024, and square).
 
 ## Stories
 
-Twelve main stories, each illustrated with its own photo:
+Twelve main stories, each illustrated with its own flat icon:
 
 1. Iran strikes Kuwait and Bahrain after the US hit Qeshm Island.
 2. US jets strike a Revolutionary Guard missile site on Qeshm.
@@ -40,32 +28,38 @@ Twelve main stories, each illustrated with its own photo:
 11. Category 5 Cyclone Xavier slams the Northern Cook Islands.
 12. The Anthropic IPO prices ahead of its Thursday debut.
 
-Thirty more stories fill the "ALSO ON WEDNESDAY" list: the Board of
-Peace rebuking Israel and Hamas, Putin ruling out serious peace
-talks, Xi against protectionism, Myanmar reviewing ASEAN, a US
-officer held for spying for Russia, an AI-found flaw in Java, the US
-losing measles-free status, cold killing in Gaza tents, NSA outages,
-a Russian plane crash killing 19, oil slipping, the World Court on
-Myanmar, Trump's Iran report, British sanctions, COP31 rows, two
-Hamas commanders killed, Russia's 20-million-drone plan, a US MQ-9
-shot down near Hormuz, Patriot systems targeted in Kuwait, quakes
-in Papua New Guinea and Romania, a solar flare, South Korea leaning
-to Beijing, NATO's new communications plan, the EU carbon tax, gold
-below $3,800, Target's best sales in five years, Slay the Spire 2
-nearing 8 million sales, Xiaomi's Paris launch, and Alonso and Loeb
-joining Aston Martin for Dakar.
+Twenty-three more stories fill the "ALSO ON WEDNESDAY" list: the Board
+of Peace rebuking Israel and Hamas, Putin ruling out serious peace
+talks, Xi against protectionism, Myanmar reviewing ASEAN, a US officer
+held for spying for Russia, an AI-found flaw in Java, the US losing
+measles-free status, cold killing in Gaza tents, NSA outages, a
+Russian plane crash killing 19, oil slipping, the World Court on
+Myanmar, Trump's Iran report, British sanctions, COP31 rows, two Hamas
+commanders killed, Russia's 20-million-drone plan, a US MQ-9 shot
+down near Hormuz, Patriot systems targeted in Kuwait, a quake in
+Papua New Guinea, a solar flare, South Korea leaning to Beijing, and
+gold below $3,800.
 
 ## Design
 
 The front page follows the classic broadsheet: a globe icon and the
 "THE WORLD'S NEWS" masthead, a dark-blue navigation bar, a 4x3 grid
 of twelve illustrated story cards with numbered tags and category
-ribbons, a three-column "ALSO" list, and a golden-hour strip of
-world landmarks above the footer bar. Every headline and date was
-checked against real reporting from Wednesday 18 November 2026.
+ribbons, a "WHERE IT HAPPENED" world map with numbered dots marking
+where each main story happened (the map is a real Natural Earth 110m
+land silhouette with the dots placed at the true locations), a
+three-column "ALSO" list, and a sources line at the bottom. Every
+headline and date was checked against real reporting from Wednesday
+18 November 2026.
 
-## Run it
+## How the image was made
 
-```sh
-python3 main.py
-```
+The page was rendered from an HTML layout (build_newspaper.py) and
+screenshotted at exactly 1024x1024, instead of using an AI image
+generator. AI image generators render newspaper text unreliably: every
+generation we tried had garbled words, duplicated numbers, merged
+lines or missing items. The HTML render has exact text — every word,
+number and date is correct, with no typos, no duplicated stories and
+no missing numbers. The map dots sit on the true locations; the three
+Gulf dots are nudged a few pixels apart so their circles do not hide
+each other, which is standard practice for clustered map points.

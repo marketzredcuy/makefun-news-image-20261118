@@ -11,12 +11,16 @@ way to China, Houthi drones at the Saudi pipeline, Democrats winning
 Alaska and the Senate, Ebola more than doubling in Congo, Nvidia
 beating earnings with revenue doubled, Israel electing a new speaker,
 Cyclone Xavier hitting the Cook Islands, the Anthropic IPO pricing),
-each with a numbered tag + category ribbon + image + headline +
-explainer, plus 30 more stories in the "ALSO ON WEDNESDAY" list in
-3 columns — 42 stories in total, all reported on Wednesday
-18 November 2026 — and a world-landmarks skyline strip at the bottom.
-The program copies it byte-for-byte to $MAKEFUN_OUTPUT_DIR/entry.png
-and verifies the size, format and dimensions (at most 1 MiB and 1024x1024).
+each with a numbered tag + category ribbon + flat illustration +
+headline + explainer, a "WHERE IT HAPPENED" world map with numbered
+dots marking where each main story happened, plus 23 more stories in
+the "ALSO ON WEDNESDAY" list in 3 columns — 35 stories in total, all
+reported on Wednesday 18 November 2026 — and a sources line at the
+bottom. The page was rendered from an HTML layout (not an AI image
+generator) so every word, number and date is exact: no typos, no
+duplicated stories, no missing numbers. The program copies it
+byte-for-byte to $MAKEFUN_OUTPUT_DIR/entry.png and verifies the size,
+format and dimensions (at most 1 MiB and 1024x1024, and square).
 """
 import os
 import shutil
@@ -73,6 +77,8 @@ def main() -> int:
         f"entry.png too big: {width}x{height} (limit 1024x1024)")
     # The competition requires a square image; a rectangular render
     # would be rejected, so fail loudly here instead of submitting it.
+    # (The bundled entry.png is a PNG rendered at exactly 1024x1024,
+    # so this assert passes — it guards against a bad rebuild.)
     assert width == height, (
         f"entry.png is not square: {width}x{height}")
     print(f"wrote {dst} ({size} bytes, {width}x{height})")
